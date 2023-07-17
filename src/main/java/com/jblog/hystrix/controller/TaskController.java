@@ -16,6 +16,6 @@ public class TaskController {
 
     @GetMapping("/task/{id}")
     public String getTaskDetails(@PathVariable("id") Integer id) {
-        return taskService.getTaskDetails(id);
+        return taskService.getTaskDetailsCircuitBreaker(id);
     }
 }
